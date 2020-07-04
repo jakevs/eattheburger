@@ -11,6 +11,23 @@ $(function() {
             function() {
                 location.reload();
             }
-        )
+        );
     });
+
+
+    $("#submit-burger").on("click", function(e) {
+        e.preventDefault();
+        const newBurger = {
+        burger_type: $("#add-burger").val().trim(),
+        eaten: false
+    };
+    $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+    }).then(
+        function() {
+            location.reload();
+        }
+      );
+    })
 });
