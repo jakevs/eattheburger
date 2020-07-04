@@ -1,0 +1,39 @@
+.main-text {
+    background-color: #cfc9b7!important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  body {
+    background-color: #87d851;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .eat-btn, #submit-burger {
+      background-color: goldenrod;
+      border-color: rgb(231, 49, 49);
+  }
+
+  .eat-btn:hover, #submit-burger:hover {
+      background-color: rosybrown;
+      border-color: rosybrown;
+  }
+
+  form {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  #input-label {
+    font-size: 24px;
+  }
