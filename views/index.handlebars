@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <h3>Burgers ready to eat</h3>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.eaten}}
+            <li class="burger-list">{{this.burger_type}}
+              <button type="button" class="btn btn-primary devour-btn" data-id="{{id}}">Eat it!</button>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+  <div class="col-md-5 offset-md-1">
+      <h3>Burgers that have been eaten</h3>
+      <ul>
+        {{#each burgers}}
+          {{#if this.eaten}}
+            <li class="burger-list-eaten">{{this.burger_type}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
