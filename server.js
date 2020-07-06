@@ -8,10 +8,10 @@ const app = express();
 const db = require("./models");
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({
+app.use(parser.urlencoded({
     extended: false
 }));
-app.use(bodyParser.json());
+app.use(parser.json());
 
 const hbs = require("express-handlebars");
 app.engine("handlebars", hbs({
