@@ -7,11 +7,13 @@ const app = express();
 
 const db = require("./models");
 
-app.use(express.static("public"));
+
 app.use(parser.urlencoded({
-    extended: false
+    extended: true
 }));
 app.use(parser.json());
+
+app.use(express.static("public"));
 
 const hbs = require("express-handlebars");
 app.engine("handlebars", hbs({

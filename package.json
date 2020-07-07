@@ -1,29 +1,25 @@
 {
   "name": "eattheburger",
   "version": "1.0.0",
-  "description": "eattheburger",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakevs/eattheburger.git"
   },
-  "author": "jakevs",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jakevs/eattheburger/issues"
   },
   "homepage": "https://github.com/jakevs/eattheburger#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "method-override": "^3.0.0",
-    "mysql": "^2.18.1",
+    "body-parser": "^1.19.0",
+    "express-handlebars": "^5.0.0",
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.0"
   }

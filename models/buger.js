@@ -1,12 +1,27 @@
-module.exports = function(sequelize, DataTypes) {
-    const Burger = sequelize.define("Burger", {
-        burger_type: {
-            type: DataTypes.STRING,
-        },
-        eaten: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
-        }
-    });
-    return Burger;
+const orm = require("../config/orm.js");
+
+const burger = {
+    all: function(cb) {
+        orm.all("burgers", function(res) {
+            cb(res);
+        })
+    },
+    create: function(name, cb) {
+        orm.create("burgers", [
+            "burger_type", "eaten"
+        ], [
+        name, false
+        ],
+        cb
+        );
+    },
+    update: function(id, cb) {
+        const condition = "id=" + id;
+        orm.update("burgers", {
+            eaten: true
+        }, condition, cb);
+    }
+
 };
+
+module.exports = burger;
