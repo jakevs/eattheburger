@@ -1,6 +1,7 @@
 $(function() {
-    $(".eat-btn").on("click", function(e) {
+    $(".eat-btn").on("click", function(event) {
         const id = $(this).data("id");
+
         const eatenState = {
             eaten: true
         };
@@ -15,8 +16,8 @@ $(function() {
     });
 
 
-    $("#submit-burger").on("click", function(e) {
-        e.preventDefault();
+    $("#submit-burger").on("click", function(event) {
+        event.preventDefault();
         const newBurger = {
         burger_type: $("#add-burger").val().trim(),
         eaten: false
