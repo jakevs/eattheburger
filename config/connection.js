@@ -1,5 +1,6 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
+const util = require("util");
 
 var connection;
 if (process.env.JAWSDB_URL) {
@@ -21,5 +22,6 @@ connection.connect(function(err) {
   console.log("Connected as ID " + connection.threadId);
 });
 
+const query = util.promisify(connection.query).bind(connection);
 // Export connection for our ORM to use.
 module.exports = connection;

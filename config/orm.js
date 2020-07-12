@@ -8,8 +8,8 @@ async function selectAll(){
   return result
 }
 
-async function insertOne(add_burger){
-  const query = `INSERT INTO burgers (burger_type) VALUES ("${add_burger}");`;
+async function insertOne(addBurger){
+  const query = `INSERT INTO burgers (burger_type) VALUES ("${addBurger}");`;
   const result = await connection.query(query)
   console.table(result)
   return result;
@@ -18,7 +18,7 @@ async function insertOne(add_burger){
 async function updateOne(id){
   const query = `
       UPDATE burgers
-      SET devoured = true
+      SET eaten = true
       WHERE id = ${id}
   `;
   const result = await connection.query(query)
