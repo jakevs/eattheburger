@@ -1,22 +1,22 @@
 const express = require("express");
 const router = express.Router();
 
-const db = require("../models");
+const db = require("../models/burger");
 
 router.get("/", function(req, res) {
-    db.Burger.findAll({}).then(function(dbBurger) {
+    db.all(function(data) {
         const hbsObject = {
-            burgers: dbBurger
+            burgers: data
         };
         res.render("index", hbsObject);
     });
 });
 
 router.post("/api/burgers", function(req, res) {
-    db.Burger.create({
+    db.create({
         burger_type: req.body.burger_type,
         eaten: false
-    }).then(function(dbBurger) {
+    }).then(function(data) {
         res.join({
             id: result.insertId
         });
@@ -26,14 +26,14 @@ router.post("/api/burgers", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-    db.Burger.update({
+    db.update({
         eaten: true
     }, {
         where: {
             id: req.params.id
         }
-    }).then(function(dbBurger) {
-        res.json(dbBurger);
+    }).then(function(data) {
+        res.json(data);
     }).catch(function(err) {
         res.json(err);
     });
