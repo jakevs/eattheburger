@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const db = require("./models/burger");
+const db = require("./models/burger.js");
 
 app.use(parser.urlencoded({
     extended: true
@@ -23,8 +23,8 @@ app.engine("handlebars", hbs({
 }));
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/controller");
-app.use(routes);
+const routes = require("./controllers/controller.js");
+app.use("/", routes);
 
 // app.listen(PORT);
 

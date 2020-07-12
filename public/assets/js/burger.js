@@ -15,7 +15,6 @@ $(function() {
         );
     });
 
-
     $("#submit-burger").on("click", function(event) {
         event.preventDefault();
         const newBurger = {
