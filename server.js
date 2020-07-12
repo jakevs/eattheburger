@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+const db = require("./models/burger");
+
 app.use(parser.urlencoded({
     extended: true
 }));
