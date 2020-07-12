@@ -21,13 +21,13 @@ app.engine("handlebars", hbs({
 }));
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/controller.js");
+const routes = require("./controllers/controller");
 app.use(routes);
 
-app.listen(PORT);
+// app.listen(PORT);
 
 // db.sequelize.sync().then(function() {
-//     app.listen(PORT, function() {
-//         console.log("Listening on PORT" + PORT);
-//     })
+    app.listen(PORT, function() {
+        console.log("Listening on PORT " + PORT);
+    })
 // })
