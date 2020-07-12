@@ -41,8 +41,8 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.post("/api/burgers", async (req, res) => {
-    const response = await db.create(req.body.data.burger_type);
+router.post("/api/burger", async (req, res) => {
+    const response = await db.create(req.body.data.addBurger);
     res.json({
        status: 200
    })
