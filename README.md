@@ -4,7 +4,7 @@
 
 ## Description
 
-This application was created for a user to add their favorite burgers to a list of burgers, and eat them by clicking the 'Eat' button. This will render to a list of burgers that have been eaten.
+This full-stack web application was created for a user to add their favorite burgers to a list of burgers, and eat them by clicking the 'Eat' button. This will render to a list of burgers that have been eaten.
 This full-stack application was created using the Orm, Javascript, Bootstrap, Node.js, along with installable packages such as: Express, Handlebars, Passport, and MySQL for the database. 
 
 ## Table of Contents
