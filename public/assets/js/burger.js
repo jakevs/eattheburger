@@ -1,6 +1,6 @@
 $(function() {
     $(".eat-btn").on("click", function(event) {
-        event.preventDefault();
+        event.stopImmediatePropagation()();
 
         var burger_id = $(this).data("id");
         console.log(burger_id);
@@ -17,11 +17,12 @@ $(function() {
 
 $(function() {
    $("#submit-burger").on("click", function(event) {
-        event.preventDefault();
+        event.stopImmediatePropagation();
         var newBurger = {
             burgerName: $("#add-burger-box").val()
           }
-    $.ajax("/api/burger", {
+          console.log(newBurger);
+    $.ajax("/api/burger/", {
         type: "POST",
         data: { 
           data: newBurger }
@@ -34,7 +35,7 @@ $(function() {
   });
 
 
-// $(function() {
+//  $(function() {
 //     $(".eat-btn").on("click", function(event) {
 //       var id = $(this).data("id");
       
@@ -59,7 +60,7 @@ $(function() {
 //         eaten: false
 //       };
       
-//       $.ajax("/api/burgers", {
+//       $.ajax("/api/burgers/", {
 //         type: "POST",
 //         data: newBurger
 //       }).then(
