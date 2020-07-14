@@ -1,19 +1,22 @@
-// Set up MySQL connection.
 var mysql = require("mysql");
 const util = require("util");
 
-var connection;
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'burgers_db'
-  });
-}
-// Make connection.
+var connection = mysql.createConnection({
+  host: 'localhost',
+      user: 'root',
+      password: 'password',
+      database: 'burgers_db'
+})
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'password',
+//     database: 'burgers_db'
+//   });
+// }
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
@@ -23,5 +26,8 @@ connection.connect(function(err) {
 });
 
 const query = util.promisify(connection.query).bind(connection);
-// Export connection for our ORM to use.
-module.exports = connection;
+
+module.exports = {
+  query: query,
+  connection: connection,
+}

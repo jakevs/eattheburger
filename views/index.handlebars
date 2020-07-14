@@ -6,7 +6,7 @@
         {{#each burgers}}
           {{#unless this.eaten}}
             <li class="burger-list">{{this.burger_type}}
-              <button type="button" class="btn btn-primary eat-btn" data-id="{{id}}">Eat it!</button>
+              <button type="button" class="eat-btn btn btn-primary" data-id="{{id}}">Eat it!</button>
             </li>
           {{/unless}}
         {{/each}}
