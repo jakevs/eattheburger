@@ -27,8 +27,8 @@ $(function() {
           console.log(newBurger);
     $.ajax("/api/burger/", {
         type: "POST",
-        data: { 
-          data: newBurger }
+        data: 
+           newBurger 
     }).then(
         function() {
             location.reload();

@@ -42,7 +42,9 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/api/burger", async (req, res) => {
-    const response = await db.create(req.body.data.addBurger);
+    const response = await db.create(req.body);
+    console.log(req.body);
+    
     res.json({
        status: 200
    })

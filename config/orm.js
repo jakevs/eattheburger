@@ -3,14 +3,16 @@ var connection = require("../config/connection.js");
 async function selectAll(){
   const query = `SELECT * FROM burgers`;
   const result = await connection.query(query);
-  console.table(result)
+  // console.table(result)
   return result
 }
 
 async function insertOne(addBurger){
-  const query = `INSERT INTO burgers (burger_type) VALUES ("${addBurger}");`;
+  const query = `INSERT INTO burgers (burger_type) VALUES ("${addBurger.burgerName}");`;
+  // console.log(addBurger);
+  
   const result = await connection.query(query)
-  console.table(result)
+  // console.table(result)
   return result;
 }
 
