@@ -1,6 +1,7 @@
 $(function() {
     $(".eat-btn").on("click", function(event) {
-        event.stopImmediatePropagation()();
+        event.preventDefault();
+        event.stopImmediatePropagation();
 
         var burger_id = $(this).data("id");
         console.log(burger_id);
@@ -17,7 +18,9 @@ $(function() {
 
 $(function() {
    $("#submit-burger").on("click", function(event) {
+        event.preventDefault();
         event.stopImmediatePropagation();
+
         var newBurger = {
             burgerName: $("#add-burger-box").val()
           }
