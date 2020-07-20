@@ -9,7 +9,7 @@ This full-stack application was created using the Orm, Javascript, Bootstrap, No
 
 ## Table of Contents
 
-- [Deployed Site](#deployedsite)
+- [Deployed Site](#deployed-site)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
