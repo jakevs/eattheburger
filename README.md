@@ -9,10 +9,19 @@ This full-stack application was created using the Orm, Javascript, Bootstrap, No
 
 ## Table of Contents
 
+- [Deployed Site](#deployedsite)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Questions](#questions)
+
+## Deployed Site
+
+To inspect the live application, follow the link:
+
+```
+https://logthatburger.herokuapp.com/
+```
 
 ## Installation
 
